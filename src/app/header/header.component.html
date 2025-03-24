@@ -1,0 +1,24 @@
+<div class="header-container">
+    <div class="start-heading">
+       <a href="/" >SHIVA KRISHNA</a>
+       <a href="/about">ABOUT</a>
+       <a href="/experience">EXPERIENCE</a>
+       <a href="/projects">PROJECTS</a>
+       <a href="/contactMe">CONTACT ME</a>
+    </div>
+ 
+    <button type="button" class="btn btn-outline-secondary me-2 end-heading"
+            [ngbPopover]="popoverContent"
+            triggers="click" style="border: 0px;background-color: black;">
+       <div class="profile-img-container">
+           <img src="assets/new_pp.jpg" alt="Profile Image" class="profile-img"/>
+           <span class="status-dot"></span>
+       </div>
+    </button>
+ </div>
+ <ng-template #popoverContent>
+  <div class="image-model">
+    <img src="assets/new_pp.jpg" alt="Profile Image" style="margin-left: 18px;"/>
+    <p>Shiva Krishna <br> <span style="color: green;">Active</span><br> Full Stack Developer</p>
+  </div>
+</ng-template>
