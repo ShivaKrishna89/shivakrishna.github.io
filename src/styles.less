@@ -1,35 +1,37 @@
 
- body {
+body {
     font-family: "Open Sans", sans-serif;
     font-size: 1.6rem;
     background-color: rgb(15, 22, 36);
     color: rgb(242, 245, 247);
     cursor: default;
-    height: 100vh;
+    
 }   
 
 .main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: "Open Sans", sans-serif;
     font-size: 1.6rem;
-    background-color: rgb(15, 22, 36);
+    background-color: #0A1931;
     color: rgb(242, 245, 247);
     cursor: default;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
 }
+
 
 .header-container {
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color:rgb(15, 22, 36);
   
     & > .start-heading, .end-heading {
         display: flex;
         flex-direction: row;
         justify-content: start;
         gap: 47px;
-        &:hover{
-            background-color: black;
-        }
         > a {
             color: #8eb0c4;
             text-decoration: none;
@@ -103,7 +105,6 @@
 }
 
 
-
 .popover .popover-arrow {
     display: none !important;
   }
@@ -116,19 +117,18 @@
   
   
 .home-container {
+    min-height: 80vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(15, 22, 36);
+    background-color: #0A1931;
     color: rgb(242, 245, 247);
+    height: 86vh;
     cursor: default;
-    height: 100vh;
-
     & > .home-heading{
         display: flex;
         flex-direction: column;
-        padding: 135px;
-        max-height: 101px;
+        padding: 85px;
         & > button {
             cursor: pointer;
             background: linear-gradient(270deg, rgb(19, 173, 199) 0%, rgb(148, 93, 214) 100%);
@@ -147,7 +147,7 @@
 
     & h1,h2 {
         font-size: 28px;
-        font-family: cursive;
+        font-family: monospace;
     }
     & >.image-container{
         max-height: 101px;
@@ -167,3 +167,117 @@
     } 
 }
 
+
+.about-section {
+    position: relative;
+    padding: 10px 7%;
+    background-color: #0A1931; 
+    color: #D1D5DB; 
+    &> h1 {
+        color: #F8D210
+    }
+    & > p {
+        color: gray;
+    }
+  }
+  
+
+  
+  .idtsIY {
+    width: 64px;
+    height: 6px;
+    border-radius: 10px;
+    background: linear-gradient(270deg, rgb(19, 173, 199) 0%, rgb(148, 93, 214) 100%);
+    margin-bottom: 20px;
+  }
+
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 88%;
+    background-color: transparent;
+    margin-left: 102px;
+  }
+
+  .skills-section {
+    position: relative;
+    padding: 10px 7%;
+    background-color: #0A1931;
+    color: #D1D5DB;
+    width: 93%;
+    & > p{
+        color: gray;
+    }
+    & > .skills-list{
+        margin-top: 44px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 87px;
+        & > div {
+            width: 281px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            & > i{
+                font-size: 50px;
+            }
+            & > div {
+                
+            & > h4 {
+                font-size: 20px;
+            }
+            & > p {
+                font-size: 16px;
+                color: gray;
+            }
+            & > img {
+                background: transparent;
+                display: block;
+        }
+    }
+        }
+        
+    }
+  }
+
+  .journey-container {
+    margin-top: 75px;
+    width: 93%;
+    padding: 10px;
+    margin-left: 83px;
+    margin-bottom: 40px;
+    h2 > {
+        font-size: 24px;
+        background: linear-gradient(#ff7e5f, #9873ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+    }
+    h4 {
+        margin-top: 20px;
+        font-size: 20px;
+        color: white
+    }
+
+    & > p {
+        font-size: 16px;
+        color: gray;
+    }
+    & > .journey-list   {
+        display: flex;
+        flex-direction: row;
+        gap: 48px;
+        & > div {
+            width: 238px;
+            color: gray;
+
+            > p {
+                font-size: 16px;
+            }
+        }
+    }
+
+  }
