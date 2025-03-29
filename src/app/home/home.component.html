@@ -144,11 +144,14 @@
     <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>
     <h4>Contact Me</h4>
     <div class="connectMe-container">
-        <form #contactForm (submit)="submitForm(); $event.preventDefault()" >
-        <input placeholder="Name" type="text" id="name" [(ngModel)]="formData.name" name="name" required>
-        <input placeholder="Email" type="email" id="email" [(ngModel)]="formData.email" name="email" required>
-        <textarea placeholder="Message" id="message" [(ngModel)]="formData.message" style="height: 139px;" name="message" required></textarea>
-        <button type="submit">Send</button>
+        <form  #contactForm (submit)="submitForm(); $event.preventDefault()" >
+        <input placeholder="Name*" type="text" id="name" [(ngModel)]="formData.name" name="name" required>
+        <input placeholder="Email*" type="email" id="email" [(ngModel)]="formData.email" name="email" required>
+        <textarea placeholder="Message*" id="message" [(ngModel)]="formData.message" style="height: 139px;" name="message" required></textarea>
+        <button *ngIf="!isLoading" type="submit">Send</button>
+        <div *ngIf="isLoading" class="overlay">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+        </div>
         </form>
     </div>
     </section>
