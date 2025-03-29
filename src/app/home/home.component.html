@@ -16,7 +16,7 @@
     <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>
     <h4>About</h4>
     <p>
-        I am a Full Stack Developer with 2 years of experience, specializing in Angular, JavaScript, PHP, and database technologies such as MongoDB and MySQL. Throughout my career, I have successfully developed and deployed scalable applications, with a strong focus on performance and efficiency. I am passionate about staying up-to-date with the latest industry trends and continuously expanding my technical skill set to build robust, high-quality solutions. My expertise in AWS further enhances my ability to create cloud-based, scalable applications that meet business needs.
+        I am a Full Stack Developer with 2 years of experience, specializing in Angular, JavaScript, PHP and database technologies such as MongoDB and MySQL. Throughout my career, I have successfully developed and deployed scalable applications, with a strong focus on performance and efficiency. I am passionate about staying up-to-date with the latest industry trends and continuously expanding my technical skill set to build robust, high-quality solutions. My expertise in AWS further enhances my ability to create cloud-based, scalable applications that meet business needs.
     </p>
     </div>
     <div class="journey-container">
@@ -143,5 +143,22 @@
 <section id="contactMe" class="contact-container">
     <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>
     <h4>Contact Me</h4>
+    <div class="connectMe-container">
+        <form #contactForm (submit)="submitForm(); $event.preventDefault()" >
+        <input placeholder="Name" type="text" id="name" [(ngModel)]="formData.name" name="name" required>
+        <input placeholder="Email" type="email" id="email" [(ngModel)]="formData.email" name="email" required>
+        <textarea placeholder="Message" id="message" [(ngModel)]="formData.message" style="height: 139px;" name="message" required></textarea>
+        <button type="submit">Send</button>
+        </form>
+    </div>
     </section>
+
+</div>
+
+<div class="footer">
+    <h4>© 2025 Shiva Krishna. All rights reserved.</h4>
+    <div class="socialmedia-section">
+        <a href="https://www.linkedin.com/in/shivakrishna88/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/ShivaKrishna89" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </div>
 </div>
