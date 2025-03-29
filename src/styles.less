@@ -91,9 +91,9 @@ body {
     width: 187px;
     & > .image-model {
         > img{
-            height: 116px;
-            width: 115px;
-            border-radius: 29px;
+            height: 123px;
+            width: 123px;
+            border-radius: 32px;
         }
         & > p {
             margin-top: 19px;
@@ -173,6 +173,13 @@ body {
     padding: 10px 7%;
     background-color: #0A1931; 
     color: #D1D5DB; 
+    > h4 {
+        font-size: 24px;
+        background: linear-gradient(#ff7e5f, #9873ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+    }
     &> h1 {
         color: #F8D210
     }
@@ -207,6 +214,14 @@ body {
     background-color: #0A1931;
     color: #D1D5DB;
     width: 93%;
+    margin-bottom: 40px;
+    > h4 {
+        font-size: 24px;
+        background: linear-gradient(#ff7e5f, #9873ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+    }
     & > p{
         color: gray;
     }
@@ -281,3 +296,73 @@ body {
     }
 
   }
+
+  .experience-container {
+    padding: 10px;
+    margin-left: 84px;
+    margin-bottom: 70px;
+    & > div {
+        margin-bottom: 37px;
+    }
+    & > h4 {
+        font-size: 24px;
+        background: linear-gradient(#ff7e5f, #9873ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        margin-bottom: 37px;
+    }
+    & > .experience-section{
+        position: relative;
+    padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        >h4 {
+            margin-top: 10px;
+            font-size: 17px;
+            color: white
+        }
+        > p{
+            font-size: 16px;
+            color: gray;
+        }
+    }
+    & > .experience-section::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 5px;
+        background: linear-gradient(#ff7e5f, #9873ff);
+    }
+  }
+
+.projects-container {
+    padding: 10px;
+    margin-left: 84px;
+    margin-bottom: 70px;
+    & > h4 {
+        font-size: 24px;
+        background: linear-gradient(#ff7e5f, #9873ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        margin-bottom: 37px;
+    }
+}
+
+
+.contact-container {
+    padding: 10px;
+    margin-left: 84px;
+    margin-bottom: 70px;
+    & > h4 {
+        font-size: 24px;
+        background: linear-gradient(#ff7e5f, #9873ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        margin-bottom: 37px;
+    }
+}
