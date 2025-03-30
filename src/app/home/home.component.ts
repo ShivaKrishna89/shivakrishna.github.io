@@ -24,7 +24,7 @@ downloadFile() {
 submitForm() {
   if (!this.contactForm) return;
   if(!this.formData.name || !this.formData.email || !this.formData.message){
-    // alert('Please fill all required fields.')
+    alert('Please fill all required fields.')
   } else{
   this.isLoading = true;
   emailjs.sendForm(
