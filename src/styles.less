@@ -1,3 +1,8 @@
+@mobileLandscape: ~"only screen and (min-width: 451px) and (max-width: 1279px)";
+@mobile: ~"only screen and (min-width: 320px) and (max-width: 1279px)";
+@desktop: ~"only screen and (min-width:1280px) and (max-width:1799px)";
+
+
 
 body {
     font-family: "Open Sans", sans-serif;
@@ -36,6 +41,10 @@ textarea:-webkit-autofill:focus {
     cursor: default;
     min-height: 100vh;
     height: auto;
+    @media @mobile {
+        min-height: 270vh;
+    width: 208vw;
+    }
 }
 
 
@@ -49,6 +58,9 @@ textarea:-webkit-autofill:focus {
         flex-direction: row;
         justify-content: start;
         gap: 47px;
+        @media @mobile{
+            gap: 6px;
+        }
         > a {
             color: #8eb0c4;
             text-decoration: none;
@@ -143,6 +155,10 @@ textarea:-webkit-autofill:focus {
     color: rgb(242, 245, 247);
     height: 76vh;
     cursor: default;
+    @media @mobile {
+        margin-top: unset;
+        min-height: unset;
+    }
     & > .home-heading{
         display: flex;
         flex-direction: column;
@@ -166,6 +182,9 @@ textarea:-webkit-autofill:focus {
     & h1,h2 {
         font-size: 28px;
         font-family: monospace;
+        @media @mobile {
+            font-size: 16px
+        }
     }
     & >.image-container{
         max-height: 101px;
@@ -176,7 +195,14 @@ textarea:-webkit-autofill:focus {
             border-radius: 35px;
             margin-right: 188px;
             margin-top: 89px;
-            
+            @media @mobile {
+                width: 326px;
+        height: 300px;
+        padding: 10px;
+        border-radius: 35px;
+        margin-right: 105px;
+        margin-top: 91px;
+            }
              }    
           & >.image-dp{
             background-image: radial-gradient(circle farthest-side at 100% 100%, #9873ff, rgba(152, 115, 255, 0)), radial-gradient(circle farthest-side at 100% 0, #0ba5f7, rgba(85, 196, 255, 0)), radial-gradient(circle farthest-side at 0 0, #ff763c, rgba(255, 176, 60, 0)), radial-gradient(circle farthest-side at 0 100%, #ff5aaa, rgba(255, 90, 170, 0));
@@ -224,6 +250,9 @@ textarea:-webkit-autofill:focus {
     width: 88%;
     background-color: transparent;
     margin-left: 102px;
+    @media @mobile {
+        margin-left: 2px;
+    }
   }
 
   .skills-section {
@@ -233,6 +262,9 @@ textarea:-webkit-autofill:focus {
     color: #D1D5DB;
     width: 93%;
     margin-bottom: 40px;
+    @media @mobile {
+        width: 114%;
+    }
     > h4 {
         font-size: 24px;
         background: linear-gradient(#ff7e5f, #9873ff);
