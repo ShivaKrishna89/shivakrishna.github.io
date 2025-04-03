@@ -1,5 +1,5 @@
 <div class="header-container">
-    <div class="start-heading">
+    <div class="start-heading" *ngIf="!(this.platformModelService._isMobile | async)">
        <a href="#" >SHIVA KRISHNA</a>
        <a href="#about" >ABOUT</a>
        <a href="#skills" >SKILLS</a>
@@ -7,9 +7,19 @@
        <a href="#projects">PROJECTS</a>
        <a href="#contactMe">CONTACT ME</a>
     </div>
+    <button class="menu-bar" *ngIf="(this.platformModelService._isMobile | async)" [ngbPopover]="menuBar" popoverClass="menu-popover"><i class="fa-solid fa-bars"></i></button>
+    <ng-template #menuBar class="popover-class">
+      <div class="menu-bar-container">
+      <a href="#about" >ABOUT</a>
+      <a href="#skills" >SKILLS</a>
+      <a href="#experience">EXPERIENCE</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#contactMe">CONTACT ME</a>
+   </div>
+    </ng-template>
  
     <button type="button" class="btn btn-outline-secondary me-2 end-heading"
-            [ngbPopover]="popoverContent"
+            [ngbPopover]="popoverContent" popoverClass="profile-popover"
             triggers="click" style="border: 0px;background-color: rgb(15, 22, 36);">
        <div class="profile-img-container">
            <img src="assets/new_pp.jpg" alt="Profile Image" class="profile-img"/>

@@ -1,7 +1,10 @@
-@mobileLandscape: ~"only screen and (min-width: 451px) and (max-width: 1279px)";
-@mobile: ~"only screen and (min-width: 320px) and (max-width: 1279px)";
-@desktop: ~"only screen and (min-width:1280px) and (max-width:1799px)";
+// @mobileLandscape: ~"only screen and (min-width: 451px) and (max-width: 1279px)";
+// @mobile: ~"only screen and (min-width: 320px) and (max-width: 1279px)";
+// @desktop: ~"only screen and (min-width:1280px) and (max-width:1799px)";
 
+@mobile: ~"only screen and (max-width: 450px)";
+@tablet: ~"only screen and (min-width: 451px) and (max-width: 1279px)";
+@desktop: ~"only screen and (min-width: 1280px)";
 
 
 body {
@@ -42,8 +45,8 @@ textarea:-webkit-autofill:focus {
     min-height: 100vh;
     height: auto;
     @media @mobile {
-        min-height: 270vh;
-    width: 208vw;
+         min-height: 100vh;
+    width: 100vw;
     }
 }
 
@@ -52,7 +55,9 @@ textarea:-webkit-autofill:focus {
     display: flex;
     justify-content: space-between;
     background-color:rgb(15, 22, 36);
-  
+    @media @mobile{
+        height: 46px;
+    }
     & > .start-heading, .end-heading {
         display: flex;
         flex-direction: row;
@@ -86,9 +91,15 @@ textarea:-webkit-autofill:focus {
     height: 43px;
     width: 38px;
     border-radius: 34px;
-    margin-right: 1 ;
+    margin-right: 1px;
     margin-top: 7px;
     display: block;
+    @media @mobile {
+        height: 40px;
+    width: 37px;
+    margin-right: 0px;
+    margin-top: unset;
+    }
 }
 
 .status-dot {
@@ -111,13 +122,13 @@ textarea:-webkit-autofill:focus {
     100% { opacity: 1; }
   }
 
-.popover-body {
+.menu-popover > .popover-body {
     color: white !important;
     font-family: cursive;
     border-radius: 14px;
     background-color: #2d3748  !important;
-    height: 250px !important;
-    width: 187px;
+    height: 351px !important;
+    width: 210px;
     & > .image-model {
         > img{
             height: 123px;
@@ -131,6 +142,27 @@ textarea:-webkit-autofill:focus {
     }
      
 
+}
+
+
+.profile-popover > .popover-body {
+        color: white !important;
+        font-family: cursive;
+        border-radius: 14px;
+        background-color: #2d3748  !important;
+        & > .image-model {
+            > img{
+                height: 123px;
+                width: 123px;
+                border-radius: 32px;
+            }
+            & > p {
+                margin-top: 19px;
+                margin-left: 16px;
+            }
+        }
+         
+    
 }
 
 
@@ -163,6 +195,9 @@ textarea:-webkit-autofill:focus {
         display: flex;
         flex-direction: column;
         padding: 85px;
+        @media @mobile {
+            padding: 22px;
+        }
         & > button {
             cursor: pointer;
             background: linear-gradient(270deg, rgb(19, 173, 199) 0%, rgb(148, 93, 214) 100%);
@@ -196,9 +231,9 @@ textarea:-webkit-autofill:focus {
             margin-right: 188px;
             margin-top: 89px;
             @media @mobile {
-                width: 326px;
-        height: 300px;
-        padding: 10px;
+                width: 141px;
+        height: 176px;
+        padding: 5px;
         border-radius: 35px;
         margin-right: 105px;
         margin-top: 91px;
@@ -211,6 +246,10 @@ textarea:-webkit-autofill:focus {
     } 
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
 
 .about-section {
     position: relative;
@@ -513,4 +552,34 @@ textarea:-webkit-autofill:focus {
 .overlay i {
     font-size: 50px;
     color: #945dd6;
+}
+
+
+.menu-bar {
+    margin-left: 5px;
+    width: 39px;
+    border-radius: 6px;
+    height: 40px;
+    background-color: #2d4264;
+    margin-top: 4px;
+    border: 0px;
+
+}
+
+.menu-bar-container {
+    display: flex;
+    flex-direction: column;
+    > a {
+        color: #8eb0c4;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        font-family: cursive;
+        padding: 17px;
+        
+        &:hover {
+            cursor: pointer;
+        }
+        }
 }
