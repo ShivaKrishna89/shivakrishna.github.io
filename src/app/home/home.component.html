@@ -2,7 +2,14 @@
 <section id="home" class="home-container">
     <div class="home-heading">
         <h1 style="font-weight: bold;">Hey there,</h1>
-        <h2 style="color: darkgray;">This is Shiva Krishna I am a Full Stack Developer Experienced in Angular, JavaScript, PHP and databases like MongoDB and MySQL with a solid foundation in AWS for cloud-based solutions.</h2>
+        <h2 style="color: darkgray;" *ngIf="!(this.platformModelService._isMobile | async)">
+            This is Shiva Krishna. I am a Full Stack Developer experienced in Angular, JavaScript, PHP, and databases like MongoDB and MySQL, with a solid foundation in AWS for cloud-based solutions.
+          </h2>
+          
+          <h2 style="color: darkgray;" *ngIf="(this.platformModelService._isMobile | async)">
+            This Shiva Krishna, I am a Full Stack Developer skilled in Angular, JavaScript, PHP, databases and AWS cloud.
+          </h2>
+          
         <button type="button" (click)="downloadFile()">My Resume</button>
     </div>
     <div class="image-container">
@@ -135,10 +142,10 @@
 </div>
 </section>
 
-<section id="projects" class="projects-container"> 
+<!-- <section id="projects" class="projects-container"> 
     <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>
     <h4>My Projects</h4>
-</section>
+</section> -->
 
 <section id="contactMe" class="contact-container">
     <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>

@@ -188,8 +188,10 @@ textarea:-webkit-autofill:focus {
     height: 76vh;
     cursor: default;
     @media @mobile {
-        margin-top: unset;
+        margin-top: 90px;
         min-height: unset;
+        height: 43vh;
+        margin-left: 22px;
     }
     & > .home-heading{
         display: flex;
@@ -235,8 +237,7 @@ textarea:-webkit-autofill:focus {
         height: 176px;
         padding: 5px;
         border-radius: 35px;
-        margin-right: 105px;
-        margin-top: 91px;
+        margin-top: 15px;
             }
              }    
           & >.image-dp{
@@ -256,6 +257,9 @@ html, body {
     padding: 10px 7%;
     background-color: #0A1931; 
     color: #D1D5DB; 
+    @media @mobile {
+        margin-left: 10px;
+    }
     > h4 {
         font-size: 24px;
         background: linear-gradient(#ff7e5f, #9873ff);
@@ -303,6 +307,7 @@ html, body {
     margin-bottom: 40px;
     @media @mobile {
         width: 114%;
+        margin-left:22px;
     }
     > h4 {
         font-size: 24px;
@@ -353,12 +358,24 @@ html, body {
     padding: 10px;
     margin-left: 83px;
     margin-bottom: 40px;
+    @media @mobile {
+        margin-top: 75px;
+        width: 93%;
+        padding: 10px;
+        margin-left: 22px;
+        overflow-y: auto;
+        margin-bottom: 40px;
+    }
     h2 > {
         font-size: 24px;
         background: linear-gradient(#ff7e5f, #9873ff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;
+
+        @media @mobile {
+
+        }
     }
     h4 {
         margin-top: 20px;
@@ -390,6 +407,10 @@ html, body {
     padding: 10px;
     margin-left: 84px;
     margin-bottom: 70px;
+
+    @media @mobile {
+        margin-left: 22px;
+    }
     & > div {
         margin-bottom: 37px;
     }
@@ -447,6 +468,9 @@ html, body {
     margin-left: 84px;
     margin-bottom: 70px;
     height: 100%;
+    @media @mobile {
+        margin-left: 29px;
+    }
     & > h4 {
         font-size: 24px;
         background: linear-gradient(#ff7e5f, #9873ff);
@@ -470,6 +494,9 @@ html, body {
             font-size: 15px;
             height: 48px;
             padding: 12px;
+            @media @mobile {
+                width: 90%;
+            }
         }
         & > label {
             font-size: 20px;

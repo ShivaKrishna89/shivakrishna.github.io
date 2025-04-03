@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import { PlatformModelService } from '../platform-model.service';
 @Component({
   selector: 'app-home',
   imports: [FormsModule,CommonModule],
@@ -9,6 +10,9 @@ import emailjs from '@emailjs/browser';
   styleUrl: './home.component.less'
 })
 export class HomeComponent {
+  constructor(public platformModelService:PlatformModelService) {
+
+  }
   @ViewChild('contactForm') contactForm!: ElementRef<HTMLFormElement>;
   formData:any = {name:'', email:'', message:''};
   isLoading:any = false;
