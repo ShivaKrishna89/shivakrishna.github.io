@@ -381,7 +381,6 @@ html, body {
   }
 
   .journey-container {
-    margin-top: 75px;
     width: 93%;
     padding: 10px;
     margin-left: 83px;
@@ -402,6 +401,8 @@ html, body {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: bold;
+      margin-top: 51px;
+      margin-bottom: 37px;
       @media @mobile {
         margin-bottom: 30px;
       }
@@ -445,13 +446,16 @@ html, body {
         &::before {
           content: "";
           position: absolute;
-          left: -23px;
+          left: -14px;
           top: 15px;
           width: 12px;
           height: 12px;
           background: white;
           border: 2px solid #ff7e5f;
           border-radius: 50%;
+          @media @mobile {
+            left: -23px;
+          }
         }
   
         h4 {
