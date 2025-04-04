@@ -112,6 +112,9 @@ textarea:-webkit-autofill:focus {
     border-radius: 50%;
     border: 2px solid black; 
     animation: blink 1.5s infinite ease-in-out;
+    @media @mobile {
+        bottom: -5px;
+    }
 }
 
 
@@ -188,10 +191,13 @@ textarea:-webkit-autofill:focus {
     height: 76vh;
     cursor: default;
     @media @mobile {
-        margin-top: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
         min-height: unset;
-        height: 43vh;
-        margin-left: 10px;
+        margin-left: 15px;
+        text-align: left;
+        height: 100%;
     }
     & > .home-heading{
         display: flex;
@@ -213,6 +219,10 @@ textarea:-webkit-autofill:focus {
             margin-right: 10px;
             color: white;
             width: 164px;
+            @media @mobile {
+                margin-top: 29px;
+            }
+            
         }
     }
 
@@ -225,6 +235,9 @@ textarea:-webkit-autofill:focus {
     }
     & >.image-container{
         max-height: 101px;
+        @media @mobile {
+            max-height: unset;
+        }
          > img {
             width: 451px;
             height: 343px;
@@ -233,11 +246,13 @@ textarea:-webkit-autofill:focus {
             margin-right: 188px;
             margin-top: 89px;
             @media @mobile {
-                width: 141px;
-        height: 176px;
-        padding: 5px;
-        border-radius: 35px;
-        margin-top: 15px;
+                width: 60%;
+                height: 182px;
+                padding: 5px;
+                border-radius: 35px;
+                margin-top: 15px;
+                margin-left: 16px;
+                
             }
              }    
           & >.image-dp{
@@ -259,6 +274,7 @@ html, body {
     color: #D1D5DB; 
     @media @mobile {
         margin-left: 10px;
+        margin-top: 50px;
     }
     > h4 {
         font-size: 24px;
@@ -272,6 +288,9 @@ html, body {
     }
     & > p {
         color: gray;
+        @media @mobile {
+            font-size: 12px;
+        }
     }
   }
   
@@ -318,6 +337,9 @@ html, body {
     }
     & > p{
         color: gray;
+        @media @mobile {
+        font-size: 14px;
+        }
     }
     & > .skills-list{
         margin-top: 44px;
@@ -325,8 +347,11 @@ html, body {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 87px;
+        @media @mobile {
+            gap: 42px;
+        }
         & > div {
-            width: 281px;
+            width: 345px;
             display: flex;
             flex-direction: row;
             gap: 20px;
@@ -359,12 +384,12 @@ html, body {
     margin-left: 83px;
     margin-bottom: 40px;
     @media @mobile {
-        margin-top: 75px;
         width: 93%;
         padding: 10px;
-        margin-left: 10px;
         overflow-y: auto;
         margin-bottom: 40px;
+        margin-top: 39px;
+        margin-left: 25px;
     }
     h2 > {
         font-size: 24px;
@@ -409,7 +434,7 @@ html, body {
     margin-bottom: 70px;
 
     @media @mobile {
-        margin-left: 10px;
+        margin-left: 20px;
     }
     & > div {
         margin-bottom: 37px;
@@ -534,10 +559,14 @@ html, body {
         color: white;
         font-size: 5px;
         text-align: center;
+
         & > h4 {
             font-size: 18px;
             margin-top: 7px;
             font-family: monospace;
+            @media @mobile {
+                font-size: 12px;
+            }
         }
 }
 
@@ -555,6 +584,9 @@ html, body {
         font-size: 23px;
     color: white;
     transition: transform 0.3s ease, color 0.3s ease;
+    @media @mobile {
+        font-size: 17px;
+    }
 }
 }
 
@@ -583,12 +615,12 @@ html, body {
 
 
 .menu-bar {
-    margin-left: 5px;
-    width: 39px;
+    margin-left: 4px;
+    width: 35px;
     border-radius: 6px;
-    height: 40px;
+    height: 36px;
     background-color: #2d4264;
-    margin-top: 4px;
+    margin-top: 5px;
     border: 0px;
 
 }

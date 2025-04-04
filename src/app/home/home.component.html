@@ -1,5 +1,5 @@
 <div class="main-section">
-<section id="home" class="home-container">
+<section id="home" *ngIf="!(this.platformModelService._isMobile | async)" class="home-container">
     <div class="home-heading">
         <h1 style="font-weight: bold;">Hey there,</h1>
         <h2 style="color: darkgray;" *ngIf="!(this.platformModelService._isMobile | async)">
@@ -17,14 +17,37 @@
     </div>
     
 </section>
+<section id="home" *ngIf="(this.platformModelService._isMobile | async)" class="home-container">
+    <div class="image-container">
+        <img src="assets/dp.jpg" alt="Profile Image" class="image-dp"/>
+    </div>
+    <div class="home-heading">
+        <h1 style="font-weight: bold;">Hey there,</h1>
+        <h2 style="color: darkgray;" *ngIf="!(this.platformModelService._isMobile | async)">
+            This is Shiva Krishna. I am a Full Stack Developer experienced in Angular, JavaScript, PHP, and databases like MongoDB and MySQL, with a solid foundation in AWS for cloud-based solutions.
+          </h2>
+          
+          <h2 style="color: darkgray;" *ngIf="(this.platformModelService._isMobile | async)">
+            This Shiva Krishna, I am a Full Stack Developer skilled in Angular, JavaScript, PHP, databases and AWS cloud.
+          </h2>
+          
+        <button type="button" (click)="downloadFile()">My Resume</button>
+    </div>
+   
+    
+</section>
 
 <section id="about" class="about-container">
     <div class="about-section">
     <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>
     <h4>About</h4>
-    <p>
+    <p *ngIf="!(this.platformModelService._isMobile | async)">
         I am a Full Stack Developer with 2 years of experience, specializing in Angular, JavaScript, PHP and database technologies such as MongoDB and MySQL. Throughout my career, I have successfully developed and deployed scalable applications, with a strong focus on performance and efficiency. I am passionate about staying up-to-date with the latest industry trends and continuously expanding my technical skill set to build robust, high-quality solutions. My expertise in AWS further enhances my ability to create cloud-based, scalable applications that meet business needs.
     </p>
+    <p *ngIf="(this.platformModelService._isMobile | async)">
+        Full Stack Developer with 2 years of experience in Angular, JavaScript, PHP, MongoDB, and MySQL. Skilled in building fast, scalable apps with a focus on performance. Passionate about learning new tech and experienced in AWS for cloud-based solutions.
+    </p>
+    
     </div>
     <div class="journey-container">
         <h2>My Journey</h2>
