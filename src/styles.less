@@ -289,7 +289,7 @@ html, body {
     & > p {
         color: gray;
         @media @mobile {
-            font-size: 12px;
+            font-size: 14px;
         }
     }
   }
@@ -322,7 +322,7 @@ html, body {
     padding: 10px 7%;
     background-color: #0A1931;
     color: #D1D5DB;
-    width: 93%;
+    width: 100%;
     margin-bottom: 40px;
     @media @mobile {
         width: 114%;
@@ -347,11 +347,14 @@ html, body {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 87px;
+        &> div:nth-child(n+8){
+            margin-left: 16px;
+        }
         @media @mobile {
             gap: 42px;
         }
         & > div {
-            width: 345px;
+            width: 313px;
             display: flex;
             flex-direction: row;
             gap: 20px;
@@ -383,50 +386,95 @@ html, body {
     padding: 10px;
     margin-left: 83px;
     margin-bottom: 40px;
+  
     @media @mobile {
-        width: 93%;
-        padding: 10px;
-        overflow-y: auto;
-        margin-bottom: 40px;
-        margin-top: 39px;
-        margin-left: 25px;
+      width: 93%;
+      padding: 10px;
+      overflow-y: auto;
+      margin-bottom: 40px;
+      margin-top: 39px;
+      margin-left: 25px;
     }
-    h2 > {
-        font-size: 24px;
-        background: linear-gradient(#ff7e5f, #9873ff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-
-        @media @mobile {
-
-        }
+  
+    h2 {
+      font-size: 24px;
+      background: linear-gradient(#ff7e5f, #9873ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      @media @mobile {
+        margin-bottom: 30px;
+      }
     }
-    h4 {
-        margin-top: 20px;
-        font-size: 20px;
-        color: white
-    }
-
-    & > p {
-        font-size: 16px;
+  
+    .journey-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      padding-left: 20px; 
+  
+      @media @mobile {
+        padding-left: 30px; 
+      }
+  
+      &::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(to bottom, #ff7e5f, #9873ff);
+        border-radius: 2px;
+      }
+  
+      & > div {
+        position: relative;
+        padding: 10px 15px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
         color: gray;
-    }
-    & > .journey-list   {
-        display: flex;
-        flex-direction: row;
-        gap: 48px;
-        & > div {
-            width: 238px;
-            color: gray;
-
-            > p {
-                font-size: 16px;
-            }
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+        @media @mobile {
+          width: 100%;
         }
+  
+        &::before {
+          content: "";
+          position: absolute;
+          left: -23px;
+          top: 15px;
+          width: 12px;
+          height: 12px;
+          background: white;
+          border: 2px solid #ff7e5f;
+          border-radius: 50%;
+        }
+  
+        h4 {
+          font-size: 20px;
+          color: white;
+          margin-bottom: 5px;
+        }
+  
+        p {
+          font-size: 16px;
+          color: gray;
+        }
+  
+        &:hover {
+          transform: scale(1.03);
+          transition: 0.3s;
+        }
+      }
     }
-
   }
+  
+
+
 
   .experience-container {
     padding: 10px;
@@ -434,7 +482,7 @@ html, body {
     margin-bottom: 70px;
 
     @media @mobile {
-        margin-left: 20px;
+        margin-left: 29px;
     }
     & > div {
         margin-bottom: 37px;
@@ -494,7 +542,7 @@ html, body {
     margin-bottom: 70px;
     height: 100%;
     @media @mobile {
-        margin-left: 10px;
+        margin-left: 35px;
     }
     & > h4 {
         font-size: 24px;
