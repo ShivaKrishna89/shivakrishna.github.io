@@ -151,21 +151,21 @@
                 <p>I have hands-on experience with AWS cloud computing.</p>
             </div>
             </div>
-            <div >
+            <div style="margin-left: 16px">
                 <i class="fa-brands fa-html5"></i>
                 <div>
                 <h4>HTML</h4>
                 <p>I create structured and accessible web pages.</p>
                 </div>
             </div>
-            <div>
+            <div [style]="(platformModelService._isMobile | async) ? 'margin-left: 16px' : 'margin-left: 0px'">
                 <i class="fa-brands fa-css3-alt"></i>
                 <div>
                 <h4>CSS</h4>
                 <p>I style web pages for a responsive user experience.</p>
             </div>
             </div>
-            <div>
+            <div [style]="(platformModelService._isMobile | async) ? 'margin-left: 10px' : 'margin-left: 0px'">
                 <i class="fa-brands fa-less"></i>
                 <div>
                 <h4>LESS</h4>
