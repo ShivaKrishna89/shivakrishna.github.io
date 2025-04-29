@@ -19,7 +19,7 @@ export class HomeComponent {
 
 downloadFile() {
     const link = document.createElement('a');
-    link.href = '/assets/new_resume.pdf';
+    link.href = '/new_resume.pdf';
     link.download = 'resume.pdf';
     link.click();
 }
