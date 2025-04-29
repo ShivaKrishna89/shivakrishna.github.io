@@ -247,8 +247,10 @@ textarea:-webkit-autofill:focus {
             margin-right: 188px;
             margin-top: 89px;
             @media @mobile, @tablet {
-                width: 60%;
-                height: 182px;
+                min-width: 10%;
+                max-width: 96%;
+                min-height: 125px;
+                max-height: 300px;
                 padding: 5px;
                 border-radius: 35px;
                 margin-top: 15px;
@@ -684,7 +686,6 @@ html, body {
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
-        font-family: cursive;
         padding: 17px;
         border-bottom: 1px solid gray;
         &:hover {
