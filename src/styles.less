@@ -1,5 +1,5 @@
-// @mobileLandscape: ~"only screen and (min-width: 451px) and (max-width: 1279px)";
-// @mobile: ~"only screen and (min-width: 320px) and (max-width: 1279px)";
+// @mobile, @tabletLandscape: ~"only screen and (min-width: 451px) and (max-width: 1279px)";
+// @mobile, @tablet: ~"only screen and (min-width: 320px) and (max-width: 1279px)";
 // @desktop: ~"only screen and (min-width:1280px) and (max-width:1799px)";
 
 @mobile: ~"only screen and (max-width: 450px)";
@@ -44,7 +44,7 @@ textarea:-webkit-autofill:focus {
     cursor: default;
     min-height: 100vh;
     height: auto;
-    @media @mobile {
+    @media @mobile, @tablet {
          min-height: 100vh;
     width: 100vw;
     }
@@ -55,7 +55,7 @@ textarea:-webkit-autofill:focus {
     display: flex;
     justify-content: space-between;
     background-color:rgb(15, 22, 36);
-    @media @mobile{
+    @media @mobile, @tablet{
         height: 46px;
     }
     & > .start-heading, .end-heading {
@@ -63,7 +63,7 @@ textarea:-webkit-autofill:focus {
         flex-direction: row;
         justify-content: start;
         gap: 47px;
-        @media @mobile{
+        @media @mobile, @tablet{
             gap: 6px;
         }
         > a {
@@ -94,7 +94,7 @@ textarea:-webkit-autofill:focus {
     margin-right: 1px;
     margin-top: 7px;
     display: block;
-    @media @mobile {
+    @media @mobile, @tablet {
         height: 40px;
     width: 37px;
     margin-right: 0px;
@@ -112,7 +112,7 @@ textarea:-webkit-autofill:focus {
     border-radius: 50%;
     border: 2px solid black; 
     animation: blink 1.5s infinite ease-in-out;
-    @media @mobile {
+    @media @mobile, @tablet {
         bottom: -5px;
     }
 }
@@ -130,7 +130,7 @@ textarea:-webkit-autofill:focus {
     font-family: cursive;
     border-radius: 14px;
     background-color: #2d3748  !important;
-    height: 351px !important;
+    height: 291px !important;
     width: 210px;
     & > .image-model {
         > img{
@@ -191,7 +191,7 @@ textarea:-webkit-autofill:focus {
     color: rgb(242, 245, 247);
     height: 76vh;
     cursor: default;
-    @media @mobile {
+    @media @mobile, @tablet {
         display: flex;
         flex-direction: column;
         justify-content: end;
@@ -204,7 +204,7 @@ textarea:-webkit-autofill:focus {
         display: flex;
         flex-direction: column;
         padding: 85px;
-        @media @mobile {
+        @media @mobile, @tablet {
             padding: 22px;
         }
         & > button {
@@ -220,7 +220,7 @@ textarea:-webkit-autofill:focus {
             margin-right: 10px;
             color: white;
             width: 164px;
-            @media @mobile {
+            @media @mobile, @tablet {
                 margin-top: 29px;
             }
             
@@ -230,13 +230,13 @@ textarea:-webkit-autofill:focus {
     & h1,h2 {
         font-size: 28px;
         font-family: monospace;
-        @media @mobile {
+        @media @mobile, @tablet {
             font-size: 16px
         }
     }
     & >.image-container{
         max-height: 101px;
-        @media @mobile {
+        @media @mobile, @tablet {
             max-height: unset;
         }
          > img {
@@ -246,7 +246,7 @@ textarea:-webkit-autofill:focus {
             border-radius: 35px;
             margin-right: 188px;
             margin-top: 89px;
-            @media @mobile {
+            @media @mobile, @tablet {
                 width: 60%;
                 height: 182px;
                 padding: 5px;
@@ -273,9 +273,9 @@ html, body {
     padding: 10px 7%;
     background-color: #0A1931; 
     color: #D1D5DB; 
-    @media @mobile {
+    @media @mobile, @tablet {
         margin-left: 10px;
-        margin-top: 50px;
+        margin-top: 24px;
     }
     > h4 {
         font-size: 24px;
@@ -289,7 +289,7 @@ html, body {
     }
     & > p {
         color: gray;
-        @media @mobile {
+        @media @mobile, @tablet {
             font-size: 14px;
         }
     }
@@ -313,7 +313,7 @@ html, body {
     width: 88%;
     background-color: transparent;
     margin-left: 102px;
-    @media @mobile {
+    @media @mobile, @tablet {
         margin-left: 2px;
     }
   }
@@ -325,7 +325,7 @@ html, body {
     color: #D1D5DB;
     width: 100%;
     margin-bottom: 40px;
-    @media @mobile {
+    @media @mobile, @tablet {
         width: 114%;
         margin-left:10px;
     }
@@ -338,7 +338,7 @@ html, body {
     }
     & > p{
         color: gray;
-        @media @mobile {
+        @media @mobile, @tablet {
         font-size: 14px;
         }
     }
@@ -349,7 +349,7 @@ html, body {
         flex-wrap: wrap;
         gap: 87px;
         
-        @media @mobile {
+        @media @mobile, @tablet {
             gap: 42px;
         }
         & > div {
@@ -385,12 +385,11 @@ html, body {
     margin-left: 83px;
     margin-bottom: 40px;
   
-    @media @mobile {
+    @media @mobile, @tablet {
       width: 93%;
       padding: 10px;
       overflow-y: auto;
       margin-bottom: 40px;
-      margin-top: 39px;
       margin-left: 25px;
     }
   
@@ -401,8 +400,8 @@ html, body {
       -webkit-text-fill-color: transparent;
       font-weight: bold;
       margin-top: 51px;
-      margin-bottom: 37px;
-      @media @mobile {
+      margin-bottom: 24px;
+      @media @mobile, @tablet {
         margin-bottom: 30px;
       }
     }
@@ -414,7 +413,7 @@ html, body {
       position: relative;
       padding-left: 20px; 
   
-      @media @mobile {
+      @media @mobile, @tablet {
         padding-left: 30px; 
       }
   
@@ -438,7 +437,7 @@ html, body {
         width: 100%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   
-        @media @mobile {
+        @media @mobile, @tablet {
           width: 100%;
         }
   
@@ -452,7 +451,7 @@ html, body {
           background: white;
           border: 2px solid #ff7e5f;
           border-radius: 50%;
-          @media @mobile {
+          @media @mobile, @tablet {
             left: -23px;
           }
         }
@@ -484,7 +483,7 @@ html, body {
     margin-left: 84px;
     margin-bottom: 70px;
 
-    @media @mobile {
+    @media @mobile, @tablet {
         margin-left: 29px;
     }
     & > div {
@@ -544,7 +543,7 @@ html, body {
     margin-left: 84px;
     margin-bottom: 70px;
     height: 100%;
-    @media @mobile {
+    @media @mobile, @tablet {
         margin-left: 35px;
     }
     & > h4 {
@@ -570,7 +569,7 @@ html, body {
             font-size: 15px;
             height: 48px;
             padding: 12px;
-            @media @mobile {
+            @media @mobile, @tablet {
                 width: 100%;
             }
         }
@@ -615,7 +614,7 @@ html, body {
             font-size: 18px;
             margin-top: 7px;
             font-family: monospace;
-            @media @mobile {
+            @media @mobile, @tablet {
                 font-size: 12px;
             }
         }
@@ -635,7 +634,7 @@ html, body {
         font-size: 23px;
     color: white;
     transition: transform 0.3s ease, color 0.3s ease;
-    @media @mobile {
+    @media @mobile, @tablet {
         font-size: 17px;
     }
 }
