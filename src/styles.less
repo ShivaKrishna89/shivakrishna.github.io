@@ -125,34 +125,14 @@ textarea:-webkit-autofill:focus {
     100% { opacity: 1; }
   }
 
-.menu-popover > .popover-body {
-    color: white !important;
-    font-family: cursive;
-    border-radius: 14px;
-    background-color: #2d3748  !important;
-    height: 291px !important;
-    width: 210px;
-    & > .image-model {
-        > img{
-            height: 123px;
-            width: 123px;
-            border-radius: 32px;
-        }
-        & > p {
-            margin-top: 19px;
-            margin-left: 16px;
-        }
-    }
-     
 
-}
 
 
 .profile-popover > .popover-body {
         color: white !important;
     border-radius: 14px;
     background-color: #2d3748 !important;
-    height: 297px !important;
+    height: 249px !important;
     width: 210px;
         & > .image-model {
             > img{
@@ -246,16 +226,26 @@ textarea:-webkit-autofill:focus {
             border-radius: 35px;
             margin-right: 188px;
             margin-top: 89px;
-            @media @mobile, @tablet {
-                min-width: 10%;
-                max-width: 96%;
+            @media @tablet {
+                min-width: 26%;
+                max-width: 44%;
                 min-height: 125px;
-                max-height: 300px;
+                max-height: 306px;
                 padding: 5px;
                 border-radius: 35px;
                 margin-top: 15px;
                 margin-left: 16px;
                 
+            }
+            @media @mobile {
+                min-width: 10%;
+                max-width: 68%;
+                min-height: 107px;
+                max-height: 183px;
+                padding: 5px;
+                border-radius: 35px;
+                margin-top: 15px;
+                margin-left: 16px;
             }
              }    
           & >.image-dp{
