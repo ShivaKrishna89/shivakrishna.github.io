@@ -4,32 +4,22 @@
        <a href="#about" >ABOUT</a>
        <a href="#skills" >SKILLS</a>
        <a href="#experience">EXPERIENCE</a>
+       <a href="#certifications">CERTIFICATIONS</a>
        <!-- <a href="#projects">PROJECTS</a> -->
        <a href="#contactMe">CONTACT ME</a>
     </div>
-    <button class="menu-bar" *ngIf="(this.platformModelService._isMobile | async)" [ngbPopover]="menuBar" popoverClass="menu-popover"><i class="fa-solid fa-bars"></i></button>
+    <div *ngIf="(this.platformModelService._isMobile | async)" class= "start-heading">
+    <a href="#">SHIVA KRISHNA</a>
+    </div>
+    <div class= "menu-bar" *ngIf="(this.platformModelService._isMobile | async)" [ngbPopover]="menuBar" popoverClass="menu-popover"><i class="fa-solid fa-bars"></i></div>
     <ng-template #menuBar class="popover-class">
       <div class="menu-bar-container">
       <a href="#about" >ABOUT</a>
       <a href="#skills" >SKILLS</a>
       <a href="#experience">EXPERIENCE</a>
+      <a href="#certificates">CERTIFICATIONS</a>
       <!-- <a href="#projects">PROJECTS</a> -->
       <a href="#contactMe">CONTACT ME</a>
    </div>
-    </ng-template>
  
-    <button type="button" class="btn btn-outline-secondary me-2 end-heading"
-            [ngbPopover]="popoverContent" popoverClass="profile-popover"
-            triggers="click" style="border: 0px;background-color: rgb(15, 22, 36);">
-       <div class="profile-img-container">
-           <img src="assets/new_pp.jpg" alt="Profile Image" class="profile-img"/>
-           <span class="status-dot"></span>
-       </div>
-    </button>
- </div>
- <ng-template #popoverContent>
-  <div class="image-model">
-    <img src="assets/new_pp.jpg" alt="Profile Image" style="margin-left: 18px;"/>
-    <p>Shiva Krishna <br> <span style="color: green;">Active</span><br> Full Stack Developer</p>
-  </div>
-</ng-template>
+    

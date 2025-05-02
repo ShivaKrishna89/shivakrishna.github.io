@@ -58,7 +58,7 @@ textarea:-webkit-autofill:focus {
     @media @mobile, @tablet{
         height: 46px;
     }
-    & > .start-heading, .end-heading {
+    & > .start-heading {
         display: flex;
         flex-direction: row;
         justify-content: start;
@@ -66,6 +66,17 @@ textarea:-webkit-autofill:focus {
         @media @mobile, @tablet{
             gap: 6px;
         }
+        a:first-child {
+            @media @desktop {
+                margin-left: 168px;
+            }
+            
+        }
+        
+        a:nth-child(2) {
+            margin-left: 181px;
+        }
+        
         > a {
             color: #8eb0c4;
             text-decoration: none;
@@ -224,6 +235,7 @@ textarea:-webkit-autofill:focus {
             height: 343px;
             padding: 10px;
             border-radius: 35px;
+
             margin-right: 188px;
             margin-top: 89px;
             @media @tablet {
@@ -657,13 +669,15 @@ html, body {
 
 
 .menu-bar {
-    margin-left: 4px;
-    width: 35px;
-    border-radius: 6px;
-    height: 36px;
-    background-color: #2d4264;
-    margin-top: 5px;
-    border: 0px;
+    margin-right: 11px;
+    margin-top: 9px;
+
+}
+.menu-popover {
+    background-color: hsla(var(--hue), 70%, 4%, .2) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 0px !important;
 
 }
 
@@ -678,9 +692,63 @@ html, body {
         font-weight: 700;
         line-height: 24px;
         padding: 17px;
-        border-bottom: 1px solid gray;
         &:hover {
             cursor: pointer;
         }
         }
 }
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .cert-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    text-align: center;
+  }
+  
+  .cert-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cert-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .issuer {
+    color: #555;
+    font-size: 14px;
+    margin: 4px 0;
+  }
+  
+  .date {
+    color: #777;
+    font-size: 13px;
+  }
+  
+  .view-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .view-btn:hover {
+    background-color: #0056b3;
+  }
+
+
+  
