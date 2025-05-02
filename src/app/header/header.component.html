@@ -11,7 +11,7 @@
     <div *ngIf="(this.platformModelService._isMobile | async)" class= "start-heading">
     <a href="#">SHIVA KRISHNA</a>
     </div>
-    <div class= "menu-bar" *ngIf="(this.platformModelService._isMobile | async)" [ngbPopover]="menuBar" popoverClass="menu-popover"><i class="fa-solid fa-bars"></i></div>
+    <div class= "menu-bar" *ngIf="(this.platformModelService._isMobile | async)" [ngbPopover]="menuBar" popoverClass="menu-popover"><i style="font-size: 19px;" class="fa-solid fa-bars"></i></div>
     <ng-template #menuBar class="popover-class">
       <div class="menu-bar-container">
       <a href="#about" >ABOUT</a>
