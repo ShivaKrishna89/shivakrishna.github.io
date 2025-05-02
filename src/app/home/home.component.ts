@@ -49,4 +49,27 @@ submitForm() {
   );
 }
 }
+certifications = [
+  {
+    title: 'AWS Certified Developer Associate',
+    issuer: 'Amazon Web Services',
+    date: 'April 2025',
+    logo: 'assets/aws.png',
+    certificateUrl: 'https://www.credly.com/badges/b9255088-a1d4-4483-8c2b-bf6cdedc23ed/public_url'
+  },
+  {
+    title: 'Python Programming Foundation',
+    issuer: 'NXT WAVE',
+    date: 'July 2022',
+    logo: 'assets/python.png',
+    certificateUrl: 'https://certificates.ccbp.in/intensive/programming-foundations?id=QDTRVCOGII'
+  },
+  {
+    title: 'Javascript Essentials',
+    issuer: 'NXT WAVE',
+    date: 'July 2022',
+    logo: 'assets/js.png',
+    certificateUrl: 'https://certificates.ccbp.in/intensive/programming-foundations?id=QDTRVCOGII'
+  }
+];
 }

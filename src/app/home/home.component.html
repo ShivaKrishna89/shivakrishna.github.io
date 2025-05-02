@@ -190,19 +190,23 @@
     <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>
     <h4>My Projects</h4>
 </section> -->
-<!-- <section id="certifications" class="contact-container">
-    <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>
-    <h4>certifications</h4>
-       <div class="cert-grid">
-  <div class="cert-card" *ngFor="let cert of certifications">
-    <img [src]="cert.logo" alt="{{ cert.issuer }} logo" class="cert-logo" />
-    <h3>{{ cert.title }}</h3>
-    <p class="issuer">{{ cert.issuer }}</p>
-    <p class="date">Earned: {{ cert.date }}</p>
-    <a [href]="cert.certificateUrl" target="_blank" class="view-btn">View Certificate</a>
-  </div>
-</div>
-    </section> -->
+<section id="certifications" class="contact-container">
+    <h4>Certifications</h4>
+    <div class="cert-flex-container">
+        <div class="cert-card" *ngFor="let cert of certifications;; let i = index">
+          <img [src]="cert.logo" alt="{{ cert.issuer }} logo" class="cert-logo" />
+          <h3>{{ cert.title }}</h3>
+          <p class="issuer">{{ cert.issuer }}</p>
+          <p *ngIf="!(platformModelService._isMobile | async)" class="date">Earned: {{ cert.date }}</p>
+          <a [href]="cert.certificateUrl" target="_blank" class="view-btn" [ngClass]="{
+            'python': i === 1,
+            'js': i === 2
+          }"
+          >View Certificate</a>
+        </div>
+      </div>
+      
+    </section>
 
 <section id="contactMe" class="contact-container">
     <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>

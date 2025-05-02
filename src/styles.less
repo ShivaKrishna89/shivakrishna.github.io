@@ -174,7 +174,7 @@ textarea:-webkit-autofill:focus {
   
 .home-container {
     margin-top: 40px;
-    // min-height: 80vh;
+    min-height: 489px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -274,7 +274,7 @@ html, body {
 
 .about-section {
     position: relative;
-    padding: 10px 7%;
+    padding: 10px 96px;
     background-color: #0A1931; 
     color: #D1D5DB; 
     @media @mobile, @tablet {
@@ -325,7 +325,7 @@ html, body {
 
   .skills-section {
     position: relative;
-    padding: 10px 7%;
+    padding: 10px 96px;
     background-color: #0A1931;
     color: #D1D5DB;
     width: 100%;
@@ -754,4 +754,90 @@ html, body {
   }
 
 
+  .cert-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    @media @mobile,@tablet {
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+        flex-wrap: unset;
+    }
+  }
+  
+  .cert-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    width: 260px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    text-align: center;
+    > h2,h3 {
+        color: white;
+        font-size: 15px;
+    }
+    @media @mobile,@tablet {
+        height: 228px;
+        > h2,h3{
+            font-size: 9px;
+        }
+    }
+    > .python {
+        margin-top: 12px;
+        @media @mobile,@tablet {
+            margin-top: 26px;
+        }
+    }
+    > .js{
+        margin-top: 30px;
+        @media @mobile,@tablet {
+            margin-top: 36px;
+        }
+    }
+  }
+  
+  .cert-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cert-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .issuer {
+    color: #555;
+    font-size: 14px;
+    margin: 4px 0;
+    @media @mobile,@tablet {
+        font-size: 9px;
+    }
+  }
+  
+  .date {
+    color: #777;
+    font-size: 13px;
+  }
+  
+  .view-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    @media @mobile,@tablet {
+        font-size: 7px;
+    }
+  }
+  
+  .view-btn:hover {
+    background-color: #0056b3;
+  }
   
