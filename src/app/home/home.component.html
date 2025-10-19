@@ -1,73 +1,76 @@
 <div class="main-section">
 <section id="home" *ngIf="!(this.platformModelService._isMobile | async)" class="home-container">
     <div class="home-heading">
-        <h1 style="font-weight: bold;">Hey there,</h1>
-        <h2 style="color: darkgray;" *ngIf="!(this.platformModelService._isMobile | async)">
-            This is Shiva Krishna. I am a Full Stack Developer experienced in Angular, JavaScript, PHP, and databases like MongoDB and MySQL, with a solid foundation in AWS for cloud-based solutions.
+        <h1 style="font-weight: bold;color:darkgray;" #typedHeading>Hey there,</h1>
+        <h2 style="color: darkgray;" *ngIf="showSecond" #typedText >
+            This is Shiva Krishna. I am a Full Stack Developer experienced in Angular, JavaScript, Python (FastAPI, Flask), PHP and databases like MongoDB and MySQL with a solid foundation in AWS for cloud-based solutions.
           </h2>
-          
-          <h2 style="color: darkgray;" *ngIf="(this.platformModelService._isMobile | async)">
-            This Shiva Krishna, I am a Full Stack Developer skilled in Angular, JavaScript, PHP, databases and AWS cloud.
-          </h2>
-          
+
+
+
         <button type="button" (click)="downloadFile()">My Resume</button>
     </div>
     <div class="image-container">
-        <img src="assets/dp.jpg" alt="Profile Image" class="image-dp"/>
+        <img src="assets/suit.jpg" alt="Profile Image" class="image-dp"/>
+
     </div>
-    
+
 </section>
 <section id="home" *ngIf="(this.platformModelService._isMobile | async)" class="home-container">
     <div class="image-container">
-        <img src="assets/dp.jpg" alt="Profile Image" class="image-dp"/>
+        <img src="assets/suit.jpg" alt="Profile Image" class="image-dp"/>
     </div>
     <div class="home-heading">
-        <h1 style="font-weight: bold;">Hey there,</h1>
-        <h2 style="color: darkgray;" *ngIf="!(this.platformModelService._isMobile | async)">
-            This is Shiva Krishna. I am a Full Stack Developer experienced in Angular, JavaScript, PHP, and databases like MongoDB and MySQL, with a solid foundation in AWS for cloud-based solutions.
+        <h1 style="font-weight: bold;color:darkgray;" #typedHeading>Hey there,</h1>
+          <h2 style="color: darkgray;" *ngIf="showSecond"  #typedText>
+            This is Shiva Krishna, I am a Full Stack Developer skilled in Angular, JavaScript, Python (FastAPI, Flask), PHP, databases like Mongodb and Mysql and AWS cloud.
           </h2>
-          
-          <h2 style="color: darkgray;" *ngIf="(this.platformModelService._isMobile | async)">
-            This is Shiva Krishna, I am a Full Stack Developer skilled in Angular, JavaScript, PHP, databases and AWS cloud.
-          </h2>
-          
+
         <button type="button" (click)="downloadFile()">My Resume</button>
     </div>
-   
-    
+
+
 </section>
 
 <section id="about" class="about-container">
     <div class="about-section">
     <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>
     <h4>About</h4>
-    <p *ngIf="!(this.platformModelService._isMobile | async)">
-        I am a Full Stack Developer with 2 years of experience, specializing in Angular, JavaScript, PHP and database technologies such as MongoDB and MySQL. Throughout my career, I have successfully developed and deployed scalable applications, with a strong focus on performance and efficiency. I am passionate about staying up-to-date with the latest industry trends and continuously expanding my technical skill set to build robust, high-quality solutions. My expertise in AWS further enhances my ability to create cloud-based, scalable applications that meet business needs.
-    </p>
+   <p>
+  I’m <strong>Shiva Krishna</strong>, a passionate <strong>Full Stack Developer</strong> with over 3 years of professional experience building and deploying modern web applications that deliver performance, scalability, and seamless user experiences.
+  <br/><br/>
+  My core expertise lies in <strong>Angular</strong>, <strong>Python (FastAPI, Flask)</strong>, and <strong>AWS</strong>, where I design and implement <strong>microservice-based architectures</strong>, <strong>real-time data pipelines</strong>, and <strong>caching layers</strong> using <strong>Redis</strong> and <strong>Memcached</strong>.
+  <br/><br/>
+  I’m also experienced in <strong>AWS Cloud Services</strong> including <strong>EC2</strong>, <strong>S3</strong>, <strong>RDS</strong>, <strong>CloudFront</strong>, and <strong>IAM</strong>, where I architect and deploy secure, high-availability environments. I use <strong>Docker</strong> for containerized development, ensuring consistent builds and smooth <strong>CI/CD automation</strong>.
+  <br/><br/>
+  My technical foundation extends to <strong>system design</strong>, <strong>microservices architecture</strong>, and <strong>asynchronous messaging</strong> using <strong>RabbitMQ</strong> to build scalable, event-driven systems. I’m comfortable working with <strong>Linux</strong> environments and writing <strong>Shell scripts</strong> to automate workflows, monitor systems, and streamline deployments.
+</p>
+
     <p *ngIf="(this.platformModelService._isMobile | async)">
-        Full Stack Developer with 2 years of experience in Angular, JavaScript, PHP, MongoDB, and MySQL. Skilled in building fast, scalable apps with a focus on performance. Passionate about learning new tech and experienced in AWS for cloud-based solutions.
+         Full Stack Developer with 3 years of experience designing and deploying web applications using Angular, Python
+(FastAPI, Flask), JavaScript and AWS. Skilled in building scalable microservices, real-time data pipelines, and
+distributed caching with Redis and Memcached.
     </p>
-    
+
     </div>
     <div class="journey-container" *ngIf="!(this.platformModelService._isMobile | async)">
         <h2>My Journey</h2>
         <div class="journey-list">
         <div>
             <h4>2018</h4>
-            <p>Started my B.tech in computer science</p>
+    Began my <strong>B.Tech in Computer Science</strong>
         </div>
         <div>
             <h4>2022</h4>
-            <p>Graduated with a B.tech in computer science</p>
+    Graduated with a <strong>B.Tech in Computer Science</strong>
         </div>
         <div>
             <h4>2022</h4>
-            <p>Enrolled in Nxt Wave, an intensive training platform focused on industry-relevant skills.</p>  
+    <strong>NxtWave</strong>, an intensive full-stack development program focused on <strong>industry-ready skills</strong>
             </div>
             <div>
             <h4>2023</h4>
-            <p>Started my career as a Full Stack Developer, building both front-end and back-end applications.</p>
-            </div>
+Started my professional journey as a <strong>Full Stack Developer</strong>, designing and building <strong>end-to-end web applications</strong></div>
         </div>
     </div>
     <div class="journey-container" *ngIf="(this.platformModelService._isMobile | async)">
@@ -83,7 +86,7 @@
         </div>
         <div>
             <h4>2022</h4>
-            <p>Enrolled in Nxt Wave, an intensive training platform focused on industry-relevant skills.</p>  
+            <p>Enrolled in Nxt Wave, an intensive training platform focused on industry-relevant skills.</p>
             </div>
             <div>
             <h4>2023</h4>
@@ -93,7 +96,39 @@
     </div>
 </section>
 
+<section id="experience" class="experience-container">
+    <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>
+    <h4>My Experience</h4>
+    <div class="experience-section">
+      <div>
+        <p> <strong>Software Engineer, Probe Information Services </strong></p>
+            <p>2023 - Present</p>
+            </div>
+            <div>
+             <ul>
+    <li>
+      Contributed to <strong>full-stack web application development</strong> for a platform with
+      <strong>200K+ registered users</strong> and <strong>20K+ active users</strong>.
+    </li>
+    <li>
+      Developed and optimized <strong>RESTful APIs</strong> using <strong>Python (FastAPI)</strong> for
+      internal modules and third-party integrations, improving performance and cutting integration time by
+      <strong>30%</strong>.
+    </li>
+    <li>
+      Built and enhanced <strong>responsive, cross-browser UI components</strong> using
+      <strong>Angular Material</strong>, improving overall user engagement and accessibility.
+    </li>
+    <li>
+      Designed <strong>data pipelines</strong> and optimized queries with <strong>MySQL</strong> and
+      <strong>MongoDB</strong>, reducing API response times by <strong>40%</strong> through
+      <strong>Redis</strong> and <strong>Memcached</strong> caching.
+    </li>
+  </ul>
+            </div>
 
+</div>
+</section>
 <section id="skills">
     <div class="skills-section">
         <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>
@@ -103,94 +138,127 @@
         </p>
         <div class="skills-list">
             <div>
-                <i class="fa-brands fa-angular"></i>
+<i class="fa-brands fa-angular" style="color:#dd0031; font-size:48px;"></i>
                 <div>
                 <h4>Angular</h4>
-                <p>I develop front-end applications using Angular.</p>
                 </div>
             </div>
-            <div [ngStyle]="!(platformModelService._isMobile | async) ? {'margin-left': '10px'} : {'margin-left': '0px'}">
-                <i class="fa-brands fa-js"></i>
+            <div >
+<i class="fa-brands fa-js" style="color:#f7df1e; font-size:48px;"></i>
                 <div>
                 <h4>JavaScript</h4>
-                <p>I build dynamic web applications using JavaScript.</p>
             </div>
             </div>
-            <div>
-                <i class="fa-brands fa-angular"></i>
+                       <div>
+<i class="fa-brands fa-python" style="color:#3776ab; font-size:48px;"></i>
                 <div>
+                <h4>Python</h4>
+            </div>
+</div>
+                                  <div>
+<i class="fa-solid fa-bolt" style="color:#05998b; font-size:48px;"></i>
+                <div>
+                <h4>FastAPI</h4>
+            </div>
+            </div>
+                                  <div>
+<i class="fa-solid fa-flask" style="color:#000000; font-size:48px;"></i>
+                <div>
+                <h4>Flask</h4>
+            </div>
+            </div>
+                <div>
+<i class="fa-brands fa-angular" style="color:#e23237; font-size:48px;"></i>
+<div>
                 <h4>AngularJS</h4>
-                <p>I have experience in building SPAs using AngularJS.</p>
             </div>
             </div>
-            <div>
-                <i class="fa-brands fa-php"></i>
                 <div>
+<i class="fa-brands fa-php" style="color:#777bb4; font-size:48px;"></i>
+<div>
                 <h4>PHP</h4>
-                <p>I develop backend logic and APIs using PHP.</p>
             </div>
             </div>
             <div>
-                <i class="devicon-mongodb-plain colored"></i> 
+<i class="fa-solid fa-database" style="color:#00758f; font-size:48px;"></i>
                 <div>
                 <h4>MongoDB</h4>
-                <p>I work with NoSQL databases using MongoDB.</p>
             </div>
             </div>
             <div>
                 <i class="devicon-mysql-plain colored"></i>
                 <div>
                 <h4>MySQL</h4>
-                <p>I design and optimize relational databases.</p>
             </div>
             </div>
             <div>
-                <i class="fa-brands fa-aws"></i>
+<i class="fa-brands fa-aws" style="color:#FF9900; font-size:48px;"></i>
                 <div>
                 <h4>AWS Cloud</h4>
-                <p>I have hands-on experience with AWS cloud computing.</p>
             </div>
             </div>
             <div style="margin-left: 12px">
-                <i class="fa-brands fa-html5"></i>
+<i class="fa-brands fa-html5" style="color:#e34f26; font-size:48px;"></i>
                 <div>
                 <h4>HTML</h4>
-                <p>I create structured and accessible web pages.</p>
                 </div>
             </div>
-            <div [ngStyle]="(platformModelService._isMobile | async) ? {'margin-left': '12px'} : {'margin-left': '0px'}">
-                <i class="fa-brands fa-css3-alt"></i>
+            <div >
+<i class="fa-brands fa-css3-alt" style="color:#1572b6; font-size:48px;"></i>
                 <div>
                 <h4>CSS</h4>
-                <p>I style web pages for a responsive user experience.</p>
             </div>
             </div>
-            <div [ngStyle]="(platformModelService._isMobile | async) ? {'margin-left': '4px'} : {'margin-left': '0px'}">
-                <i class="fa-brands fa-less"></i>
+            <div >
+<i class="fa-brands fa-less" style="color:#1D365D; font-size:48px;"></i>
                 <div>
                 <h4>LESS</h4>
-                <p>I use LESS for structured and maintainable styling.</p>
             </div>
             </div>
-        </div>   
-</div>
-</section>
-<section id="experience" class="experience-container">
-    <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>
-    <h4>My Experience</h4>
-    <div class="experience-section">    
-            <h4>Full Stack Developer, Probe Information Services</h4>
-            <p>2023 - Present</p>
-            <p>Develop and maintain web applications using Angular and PHP, collaborating with cross-functional teams to deliver high-quality software solutions.</p>
-
+        </div>
 </div>
 </section>
 
-<!-- <section id="projects" class="projects-container"> 
-    <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>
-    <h4>My Projects</h4>
-</section> -->
+
+<section id="projects" class="projects-container">
+  <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>
+  <h4>Projects</h4>
+
+  <div class="project-card">
+    <img src="assets/collabx.png" alt="CollabX Logo" class="project-logo" />
+    <h3>CollabX — SaaS Project Management Platform</h3>
+    <p class="tech-stack">
+      <strong>Tech Stack:</strong> Angular, Python, FastAPI, MySQL, MongoDB, JWT Auth, AWS (S3, CloudFront, EC2, RDS), CI/CD
+    </p>
+    <ul>
+      <li>Developed backend APIs using <strong>FastAPI (Python)</strong> with JWT authentication and AsyncIO, and designed MySQL/MongoDB data models.</li>
+      <li>Deployed frontend on <strong>AWS S3 + CloudFront</strong> and backend on EC2 with RDS.</li>
+      <li>Implemented <strong>CI/CD pipelines</strong> to automate builds, tests, and deployments.</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://d2bauiyeh3wgd2.cloudfront.net/home" target="_blank" class="view-btn">Live Demo</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="assets/bydlogo.png" alt="BYD Travels Logo" class="project-logo" />
+    <h3>BYD Travels</h3>
+    <p class="tech-stack">
+      <strong>Tech Stack:</strong> Angular, TypeScript, LESS, AWS S3, CloudFront
+    </p>
+    <ul>
+      <li>Built a responsive, cross-browser website with <strong>Angular & TypeScript</strong>.</li>
+      <li>Deployed on <strong>AWS S3 + CloudFront</strong> for high performance and scalability.</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://www.bydtravels.com/home" target="_blank" class="view-btn">Live Demo</a>
+    </div>
+  </div>
+</section>
+
+
 <section id="certifications" class="contact-container">
+  <div class="GlobalComponents__SectionDivider-sc-6qzy6y-3 idtsIY"></div>
     <h4>Certifications</h4>
     <div class="cert-flex-container">
         <div class="cert-card" *ngFor="let cert of certifications;; let i = index">
@@ -205,7 +273,7 @@
           >View Certificate</a>
         </div>
       </div>
-      
+
     </section>
 
 <section id="contactMe" class="contact-container">

@@ -2,24 +2,23 @@
     <div class="start-heading" *ngIf="!(this.platformModelService._isMobile | async)">
        <a href="#" >SHIVA KRISHNA</a>
        <a href="#about" >ABOUT</a>
-       <a href="#skills" >SKILLS</a>
        <a href="#experience">EXPERIENCE</a>
+       <a href="#skills" >SKILLS</a>
+       <a href="#projects">PROJECTS</a>
        <a href="#certifications">CERTIFICATIONS</a>
-       <!-- <a href="#projects">PROJECTS</a> -->
        <a href="#contactMe">CONTACT ME</a>
     </div>
     <div *ngIf="(this.platformModelService._isMobile | async)" class= "start-heading">
     <a href="#">SHIVA KRISHNA</a>
     </div>
-    <div class= "menu-bar" *ngIf="(this.platformModelService._isMobile | async)" [ngbPopover]="menuBar" popoverClass="menu-popover"><i style="font-size: 19px;" class="fa-solid fa-bars"></i></div>
+    <div class= "menu-bar" style="color: black;" *ngIf="(this.platformModelService._isMobile | async)" [ngbPopover]="menuBar" popoverClass="menu-popover"><i style="font-size: 19px;" class="fa-solid fa-bars"></i></div>
     <ng-template #menuBar class="popover-class">
       <div class="menu-bar-container">
       <a href="#about" >ABOUT</a>
-      <a href="#skills" >SKILLS</a>
       <a href="#experience">EXPERIENCE</a>
+      <a href="#skills" >SKILLS</a>
+      <a href="#projects">PROJECTS</a>
       <a href="#certifications">CERTIFICATIONS</a>
-      <!-- <a href="#projects">PROJECTS</a> -->
       <a href="#contactMe">CONTACT ME</a>
    </div>
- 
-    
+
