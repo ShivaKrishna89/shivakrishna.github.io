@@ -49,7 +49,7 @@ export class HomeComponent implements AfterViewInit{
 
 downloadFile() {
     const link = document.createElement('a');
-    link.href = '../assets/shiva-krishna.pdf';
+    link.href = '../assets/Shiva_Krishna_Feb_2026.pdf';
     link.download = 'resume.pdf';
     link.click();
 }
